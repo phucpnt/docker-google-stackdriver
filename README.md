@@ -5,7 +5,7 @@ Setup a container that would receiving the log from other docker container and s
 
 * Run the docker
 
-```docker run -p 5514:514 -v /Users/phucpnt/projects/google-stackdriver-log/application_default_credentials.json:/etc/google/auth/application_default_credentials.json -v /Users/phucpnt/projects/google-stackdriver-log/google-fluentd.conf:/etc/google-fluentd/google-fluentd.conf -e "GOOGLE_APPLICATION_CREDENTIALS=/etc/google/auth/application_default_credentials.json" --name=google-log phucpnt/google-stackdriver-log```
+  ```docker run -p 5514:514 -v /Users/phucpnt/projects/google-stackdriver-log/application_default_credentials.json:/etc/google/auth/application_default_credentials.json -v /Users/phucpnt/projects/google-stackdriver-log/google-fluentd.conf:/etc/google-fluentd/google-fluentd.conf -e "GOOGLE_APPLICATION_CREDENTIALS=/etc/google/auth/application_default_credentials.json" --name=google-log phucpnt/google-stackdriver-log```
 * Remember to assign the following environment for location of the stackdriver log:
   * GCP_PROJECT_ID: your project id in GCP
   * GCP_VM_ID: you can name your VM name (any name)
